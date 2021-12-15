@@ -19,20 +19,18 @@ Your Choice: '''))
 
 if option == 1:
 
-	print(st.download())
+	print(f"Download Speed:{st.download()/1024/1024:.2f}MBit/s")
 
 elif option == 2:
-
-	print(st.upload())
+	print(f"Upload Speed:{st.upload()/1024/1024:.2f}MBit/s")
 
 elif option == 3:
 
 	servernames =[]
 
 	st.get_servers(servernames)
-
-	print(st.results.ping)
-
+	print(f"Ping:{st.results.ping:.2f}ms")
+	
 else:
 
 	print("Please enter the correct choice !")
